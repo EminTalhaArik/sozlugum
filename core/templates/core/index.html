@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}
+  Sözlükler
+{% endblock %}
+{% block content %}
+  <h1>Herkese selamlar!</h1>
+
+  {% for dictionary in dictionaries %}
+    {% include 'core/partials/_part_of_dictionary.html' %}
+  {% endfor %}
+{% endblock %}

@@ -1,0 +1,11 @@
+<div style="padding: 25px; border: 1px solid black">
+  <h1>Header</h1>
+  {% if user.is_authenticated %}
+  <a href="{% url 'logout' %}">Log Out</a>
+
+  {% else %}
+
+  <a href="{% url 'login' %}">Log In</a>
+  <a href="{% url 'core:signup' %}">Sign Up</a>
+  {% endif %}
+</div>

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Sign Up
+{% endblock title %}
+
+{% block content %}
+
+    <h2>Sign Page</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Register</button>
+        <br> <br>
+        <a href="{% url 'core:index' %}"></a>
+    </form>
+
+{% endblock content %}

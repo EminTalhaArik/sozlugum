@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}
+  Terimler
+{% endblock %}
+{% block content %}
+  <h1>{{ dictionary.name }}</h1>
+
+  {% for term in terms %}
+    {% include 'core/partials/_term.html' %}
+  {% endfor %}
+{% endblock %}
