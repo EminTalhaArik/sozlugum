@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{pk}}</h1>
+
+<a href="{% url 'dashboard:create_term' pk %}">Create New Term</a>
+
+{% endblock content %}

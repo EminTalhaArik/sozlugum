@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Dashboard
+{% endblock title %}
+
+{% block content %}
+
+    <h1>Dashboard</h1>
+    <p>
+        This is the dashboard.
+    </p>
+
+    <div>
+        {% for dictionary in dictionaries %}
+        
+            <a href="{% url 'dashboard:dictionary_detail' dictionary.id %}">{{dictionary.name}}</a>
+
+        {% endfor %}
+    </div>
+    
+
+{% endblock content %}
